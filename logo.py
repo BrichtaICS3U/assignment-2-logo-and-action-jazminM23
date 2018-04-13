@@ -1,6 +1,6 @@
 # ICS3U
 # Assignment 2: Logo
-# <your name>
+# Jazmin M
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
@@ -14,6 +14,8 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
+BLUE = (93, 175, 252)
+PINK = (247, 133, 218)
 
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
@@ -50,6 +52,9 @@ while carryOn:
     # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
     # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
     # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    pygame.draw.polygon(screen, BLACK, [[200,0],[0,200],[200,400],[400,200]])
+    #pygame.draw.polygon(screen, WHITE,[[175,25],[165,35],[190,150],[195,140]])
+    pygame.draw.line(screen, WHITE,[50,0], [190,100], 25)
 
     # Update the screen with queued shapes
     pygame.display.flip()
