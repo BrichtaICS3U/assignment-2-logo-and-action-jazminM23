@@ -50,11 +50,18 @@ while carryOn:
 
     # Queue different shapes and lines to be drawn
     pygame.draw.polygon(screen, BLACK, [[200,0],[0,200],[200,400],[400,200]])
+    #^this is the diamond which everything else wil be drawn onto^
     pygame.draw.line(screen, WHITE,[50,0], [275,200], 30)
-    pygame.draw.ellipse(screen, WHITE, [175,110,60,60],0)
+    #^line connecting 1st and 2nd elipse^
+    pygame.draw.ellipse(screen, WHITE, [173,110,60,60],0)
+    #^1st ellipse^
     pygame.draw.line(screen, WHITE, [202,125], [202,300], 25)
+    #^line connecting 1st ellipse and 3rd ellipse^
     pygame.draw.ellipse(screen,WHITE, [255,182,60,60],0)
-    pygame.draw.ellipse(screen, WHITE,[174,260,60,60],0)
+    #^2nd ellipse^
+    pygame.draw.ellipse(screen, WHITE,[173,260,60,60],0)
+    #^3rd ellipse^
+    
 
     # Update the screen with queued shapes
     pygame.display.flip()
