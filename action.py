@@ -1,12 +1,13 @@
 # ICS3U
 # Assignment 2: Action
-# <your name>
+# Jazmin M
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
 # Import the pygame library and initialise the game engine
 # Don't forget to import your class
 import pygame
+from bat import Bat
 pygame.init()
 
 # Define some colours
@@ -15,7 +16,7 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
-
+GREY = (155,149,150)
 # Set the screen size
 SCREENWIDTH = 400
 SCREENHEIGHT = 400
@@ -25,6 +26,14 @@ SCREENHEIGHT = 400
 size = (SCREENWIDTH, SCREENHEIGHT)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("My Animation")
+
+all_sprites_list = pygame.sprite.Group()
+    
+playerBat = Bat(GREY, 20,30)
+playerBat.rect.x = 200
+playerBat.rect.y = 300
+all_sprites_list.add(playerBat)
+
 
 # This loop will continue until the user exits the game
 carryOn = True
@@ -41,11 +50,16 @@ while carryOn:
 
     # --- Game logic goes here
     # There should be none for a static image
+
+
+    
     
     # --- Draw code goes here
+    
 
     # Clear the screen to white
     screen.fill(WHITE)
+    all_sprites_list.draw(screen)
 
     # Queue different shapes and lines to be drawn
     # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
